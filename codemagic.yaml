@@ -1,0 +1,11 @@
+workflows:
+  flutter-build:
+    name: Flutter Build
+    environment:
+      flutter: stable
+    scripts:
+      - cd flutter_app
+      - flutter pub get
+      - flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
